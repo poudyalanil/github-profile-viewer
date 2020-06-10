@@ -71,10 +71,10 @@ window.addEventListener('load', () => {
             .then(data => {
                 tableItems.innerHTML = ""
                 console.log(data)
-                for (var i = 0; i < data.length; i++) {
+                for (var i = 1; i <= data.length; i++) {
                     tableItems.innerHTML +=
                         '<tr>' +
-                        '<td>' + i + 1 + '</td>' +
+                        '<td>' + i + '</td>' +
                         '<td>' + data[i].name + '</td>' +
                         '<td>' + data[i].created_at + '</td>' +
                         '<td>' + data[i].language + '</td>' +
