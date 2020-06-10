@@ -13,6 +13,7 @@ window.addEventListener('load', () => {
     let repoEndPoint;
 
     let tableItems = document.querySelector(".tableItems");
+    let details = document.querySelector("#details");
 
     // let repoTitle = document.querySelector("#repoTitle");
     // let dateCreated = document.querySelector("#dateCreated");
@@ -71,10 +72,11 @@ window.addEventListener('load', () => {
             .then(data => {
                 tableItems.innerHTML = ""
                 console.log(data)
-                for (var i = 1; i <= data.length; i++) {
+                var ii = 1;
+                for (var i = 0; i < data.length; i++) {
                     tableItems.innerHTML +=
                         '<tr>' +
-                        '<td>' + i + '</td>' +
+                        '<td>' + ii + '</td>' +
                         '<td>' + data[i].name + '</td>' +
                         '<td>' + data[i].created_at + '</td>' +
                         '<td>' + data[i].language + '</td>' +
@@ -84,9 +86,13 @@ window.addEventListener('load', () => {
 
 
 
-
-                        ;
+                    ii++;
+                    ;
                 }
+
+
+
+
 
             })
 
