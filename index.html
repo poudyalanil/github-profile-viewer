@@ -12,6 +12,12 @@
         href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
     <title>Portfolio Generator</title>
 </head>
 
@@ -50,19 +56,43 @@
                                     aria-hidden="true"></i></a></span>
 
                     </div>
+                    <div>
+                        <table data-order='[[ 1, "asc" ]]' data-page-length='5' id="details"
+                            class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">SN.</th>
+
+                                    <th scope="col">Repo Title</th>
+                                    <th scope="col">Date Created</th>
+                                    <th scope="col">Language</th>
+                                    <th scope="col">Link</th>
+
+                                </tr>
+                            </thead>
+                            <tbody class="tableItems">
+
+
+                            </tbody>
+                        </table>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-
+    <script>
+        $(document).ready(function () {
+            $('#details').dataTable();
+        });
+    </script>
 
     <script src="./index.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+
+
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
