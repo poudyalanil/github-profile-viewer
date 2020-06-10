@@ -2,10 +2,41 @@
     margin: 0;
     pad: 0;
 }
-.profileImge{
-    border-radius: 50%;
-    padding: 5em;
-    height: 50%;
-    width: 50%;
+ 
+.card-img img{
+    width: 150px;
+    height: 150px;
+}
+.card-img .badge{
+	position: absolute;
+	top:10px;
+	right:150px;
+}
+.card-detail span{
+	color:#a2a2a2;
+	font-size: 20px;
+}
+.border{
+	width: 20%;
+}
+.card-icon span i{
+	font-size:25px;
+	margin:10px;
+	color:#000;
+}
+.card-icon a .fa-twitter:hover{
+	color:#00ACED;
+}
+.card-icon a .fa-instagram:hover{
+	color:#D93965;
+}
+.card-icon a .fa-facebook:hover{
+	color:#3B5998;
+}
+.row{
 
-}   
+    box-shadow: #000;
+}
+#userId{
+    color: #a2a2a2;
+}
