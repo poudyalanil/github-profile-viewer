@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    pad: 0;
+}
+.profileImge{
+    border-radius: 50%;
+    padding: 5em;
+    height: 50%;
+    width: 50%;
+
+}   
