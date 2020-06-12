@@ -24,65 +24,76 @@
 <body>
 
 
-    <center class=" inputSection align-middle d-flex justify-content-center mt-2 px-5 bg-light">
-        <div class="mx-auto px-5 ">
-            <p>Lets Generate Your Protfolio</p>
+    <center class=" inputSection align-middle d-flex justify-content-center mt-2 px-5 bg-dark">
+        <div class="mx-auto px-5 hide">
+            <p style="color:grey;">Lets Generate Your Portfolio</p>
             <input class="form-control mb-2" type="text" id="userNameInput" placeholder="User Name">
             <input type="submit" id="submitBtn" class="btn btn-primary">
         </div>
 
     </center>
-    <br><br><br>
-    <div class="container main-section profileSection">
-        <div class="row">
-            <div class="offset-md-4 col-lg-4 bg-white">
-                <div class="row">
+    <br>
+    <hr>
+    <br>
 
-                    <div class="col-lg-12 card-img text-center p-2">
-                        <img src="" class="profileImge rounded-circle">
+    <center class="main">
+        <div class="container main-section profileSection">
+            <div class="row">
+                <div class="offset-md-4 col-lg-4">
+                    <div class="row">
 
-                        <div class="badge badge-pill badge-danger p-1"></div>
+                        <div class="col-lg-12 card-img text-center p-2">
+                            <img src="" class="profileImge rounded-circle">
+
+                            <div class="badge badge-pill badge-danger p-1"></div>
+                        </div>
+                        <div class="col-lg-12 text-center card-detail pt-3 pb-5">
+                            <h6 id="userId"></h6>
+                            <h2 id="fullName"></h2>
+                            <span id="detail"></span>
+
+                            <hr class="border">
+
+                        </div>
+                        <div class="col-lg-12 text-center pb-2 card-icon">
+                            <span><a class="twitter" href="" target="_blank"><i class="fa  fa-twitter"
+                                        style="color: white;" aria-hidden="true"></i></a></span>
+
+                        </div>
+
                     </div>
-                    <div class="col-lg-12 text-center card-detail pt-3 pb-5">
-                        <h6 id="userId"></h6>
-                        <h2 id="fullName"></h2>
-                        <span id="detail"></span>
-
-                        <hr class="border">
-
-                    </div>
-                    <div class="col-lg-12 text-center pb-2 card-icon">
-                        <span><a class="twitter" href="" target="_blank"><i class="fa  fa-twitter"
-                                    aria-hidden="true"></i></a></span>
-
-                    </div>
-
                 </div>
             </div>
+            <div class="table_info">
+                <table id="details" title="Public Repo Info" align="center" cellpadding="5" cellspacing="5" border="0"
+                    class="table table-hover table-striped table-dark">
+                    <thead>
+                        <title style="color: grey;">Public Repo Info</title>
+                        <tr>
+                            <th scope="col">SN.</th>
+
+                            <th scope="col">Repo Title</th>
+                            <th scope="col">Date Created</th>
+                            <th scope="col">Language</th>
+                            <th scope="col">Link</th>
+
+                        </tr>
+                    </thead>
+                    <tbody class="tableItems">
+
+
+                    </tbody>
+                </table>
+
+            </div>
+
         </div>
-        <div>
-            <table data-order='[[ 1, "asc" ]]' data-page-length='5' id="details" class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">SN.</th>
-
-                        <th scope="col">Repo Title</th>
-                        <th scope="col">Date Created</th>
-                        <th scope="col">Language</th>
-                        <th scope="col">Link</th>
-
-                    </tr>
-                </thead>
-                <tbody class="tableItems">
-
-
-                </tbody>
-            </table>
-
-        </div>
-
-    </div>
-
+    </center>
+    <center>
+        <footer class="copyInfo" style="padding-top: 15px;">
+            <p style="color: grey;">&copy; Anil Poudyal</p>
+        </footer>
+    </center>
     <script src="./index.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -96,10 +107,7 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 
-    <script> details.classList.add("table-striped");
-        $(document).ready(function () {
-            $('#details').dataTable();
-        });</script>
+
 </body>
 
 </html>

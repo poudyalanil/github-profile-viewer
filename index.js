@@ -10,6 +10,7 @@ window.addEventListener('load', () => {
     let fullName = document.querySelector("#fullName");
     let detail = document.querySelector("#detail")
     let badge = document.querySelector(".badge")
+
     let repoEndPoint;
 
     let tableItems = document.querySelector(".tableItems");
@@ -30,7 +31,7 @@ window.addEventListener('load', () => {
     submitBtn.addEventListener("click", () => {
 
         getInfo(inputText.value);
-        profileSection.style.display = "block";
+
 
 
     });
@@ -40,7 +41,7 @@ window.addEventListener('load', () => {
         let endpoint = await fetch(`https://api.github.com/users/${username}`);
         let info = await endpoint.json();
         if (info.message != "Not Found") {
-            // inputSection.style.display = "none";
+
             // console.log(info)
             profileImage.src = info.avatar_url;
             userId.textContent = info.login;
@@ -52,7 +53,7 @@ window.addEventListener('load', () => {
             if (twitterUserName.length > 10) {
                 twitter.href = twitterUserName;
             } else {
-                twitter.display = "none"; q
+                twitter.display = "none";
             }
             badge.textContent = info.public_repos;
 
@@ -62,8 +63,11 @@ window.addEventListener('load', () => {
 
 
         } else {
+            profileSection.style.display = "none";
             alert("User Name Incorrect")
+
         }
+
 
 
     }
@@ -94,12 +98,15 @@ window.addEventListener('load', () => {
 
 
 
-            })
 
-        )
+            }
+            )
+        );
+        profileSection.style.display = "block";
+        profileSection.scrollIntoView();
 
-    };
 
+    }
 
 });
 
